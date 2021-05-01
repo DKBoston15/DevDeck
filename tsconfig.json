@@ -1,0 +1,6 @@
+{
+    "extends": "@tsconfig/svelte/tsconfig.json",
+
+    "include": ["src/**/*", "chrome-extension/background.js"],
+    "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+}
