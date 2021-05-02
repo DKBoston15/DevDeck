@@ -1,14 +1,24 @@
 <script lang="ts">
-	let count: number;
-	count = 0;
+    import browser from "webextension-polyfill";
+    import CardList from "./components/CardList.svelte";
+    import { list } from "./stores";
 
-function sum() {
-	count++;
-}
+    function change() {
+        browser.storage.local.set({});
+    }
+    const addItem = () => {
+        let item = {
+            name: "Offical React Docs",
+            link: "https://reactjs.org/docs/getting-started.html",
+            category: "React",
+            id: 1,
+            tags: ["react", "start"]
+        };
+        list.update((state) => [...state, item]);
+    };
 </script>
 
-<p>Counter: {count}</p>
-<button on:click={sum}> + </button>
-
-<style>
-</style>
+<main>
+    <CardList />
+    <button on:click={addItem}> Add a number </button>
+</main>
