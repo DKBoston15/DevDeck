@@ -1,11 +1,16 @@
 {
     "name": "DevDeck",
-    "version": "1.0",
-    "description": "Chrome extension + Svelte boilerplate",
+    "version": "0.1",
+    "description": "A deck of developer resources at your fingertips!",
     "permissions": ["activeTab"],
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "DevDeck"
     },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "icons": {
+        "16": "devdeck_icon16.png",
+        "48": "devdeck_icon48.png",
+        "128": "devdeck_icon128.png"
+    }
 }
