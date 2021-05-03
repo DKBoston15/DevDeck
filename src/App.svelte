@@ -2,6 +2,7 @@
     import browser from "webextension-polyfill";
     import CategoryList from "./modules/CategoryList.svelte";
     import DevList from "./modules/DevList.svelte";
+    import CategoryForm from "./modules/CategoryForm.svelte";
 
     let page = "category";
     // function change() {
@@ -17,6 +18,7 @@
     {#if page === "category"}
         <DevList />
     {/if}
+    <CategoryForm />
 </main>
 
 <!-- Update Store

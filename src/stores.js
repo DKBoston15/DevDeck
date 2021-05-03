@@ -211,3 +211,5 @@ export const resources = writable([
         ]
     }
 ]);
+
+export const newCategory = writable({ id: 0, title: "", icon: "" });
