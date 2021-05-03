@@ -3,18 +3,6 @@
 
     let selectedIcon = "";
 
-    const randId = (size) => {
-        const nums = Array.from({ length: 10 }, (_, i) =>
-            String.fromCharCode("0".charCodeAt(0) + i)
-        );
-        const chars = [...nums];
-        const rand = (length) => Math.floor(Math.random() * length);
-        return Array.from(
-            { length: size },
-            () => chars[rand(chars.length)]
-        ).join("");
-    };
-
     function onChange(event) {
         selectedIcon = event.currentTarget.value;
         $newCategory.icon = selectedIcon;

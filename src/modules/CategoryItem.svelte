@@ -1,10 +1,11 @@
 <script lang="ts">
-    import { selectedResource } from "../stores";
+    import { selectedResource, page } from "../stores";
     export let icon: string;
     export let title: string;
 
     const changeResource = ({ title }) => {
         selectedResource.set(title);
+        page.set("resource");
     };
     console.log(icon);
 </script>
