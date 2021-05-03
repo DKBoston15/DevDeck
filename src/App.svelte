@@ -3,22 +3,26 @@
     import CategoryList from "./modules/CategoryList.svelte";
     import DevList from "./modules/DevList.svelte";
     import CategoryForm from "./modules/CategoryForm.svelte";
-
-    let page = "category";
+    import { page } from "./stores";
     // function change() {
     //     browser.storage.local.set({});
     // }
 </script>
 
 <main>
-    {#if page === "category"}
+    {#if $page === "category"}
         <CategoryList />
     {/if}
 
-    {#if page === "category"}
+    {#if $page === "category"}
         <DevList />
     {/if}
-    <CategoryForm />
+
+    {#if $page === "categoryForm"}
+        <CategoryForm />
+    {/if}
+
+    <button on:click={() => page.set("categoryForm")} />
 </main>
 
 <!-- Update Store

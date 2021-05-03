@@ -1,11 +1,12 @@
 <script>
     import Input from "../components/Input.svelte";
     import IconSelect from "../components/IconSelect.svelte";
-    import { categories, newCategory } from "../stores";
+    import { page, categories, newCategory } from "../stores";
 
     const addResource = () => {
         $categories.push({ ...$newCategory });
         $categories = $categories;
+        page.set("category");
     };
 </script>
 
