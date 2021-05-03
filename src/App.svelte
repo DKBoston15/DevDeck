@@ -1,24 +1,23 @@
 <script lang="ts">
     import browser from "webextension-polyfill";
-    import CardList from "./components/CardList.svelte";
-    import { list } from "./stores";
+    import CategoryList from "./modules/CategoryList.svelte";
+    import DevList from "./modules/DevList.svelte";
 
-    function change() {
-        browser.storage.local.set({});
-    }
-    const addItem = () => {
-        let item = {
-            name: "Offical React Docs",
-            link: "https://reactjs.org/docs/getting-started.html",
-            category: "React",
-            id: 1,
-            tags: ["react", "start"]
-        };
-        list.update((state) => [...state, item]);
-    };
+    let page = "category";
+    // function change() {
+    //     browser.storage.local.set({});
+    // }
 </script>
 
 <main>
-    <CardList />
-    <button on:click={addItem}> Add a number </button>
+    {#if page === "category"}
+        <CategoryList />
+    {/if}
+
+    {#if page === "category"}
+        <DevList />
+    {/if}
 </main>
+
+<!-- Update Store
+list.update((state) => [...state, item]); -->
