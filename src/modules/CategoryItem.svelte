@@ -6,6 +6,7 @@
     const changeResource = ({ title }) => {
         selectedResource.set(title);
     };
+    console.log(icon);
 </script>
 
 <div on:click={changeResource({ title })}>
