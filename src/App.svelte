@@ -4,15 +4,16 @@
     import DevList from "./modules/DevList.svelte";
     import CategoryForm from "./modules/CategoryForm.svelte";
     import ResourceForm from "./modules/ResourceForm.svelte";
-    import { page } from "./stores";
-    // function change() {
-    //     browser.storage.local.set({});
-    // }
+    import { page, categories } from "./stores/stores";
+
+    // import { saveData } from "./background";
+    // saveData($categories);
 </script>
 
 <main>
     {#if $page === "category"}
         <CategoryList />
+        {JSON.stringify($categories)}
         <button on:click={() => page.set("categoryForm")}>Add Category</button>
         <button on:click={() => page.set("resourceForm")}>Add Resource</button>
     {/if}

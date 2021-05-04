@@ -2,13 +2,13 @@
     "name": "DevDeck",
     "version": "0.1",
     "description": "A deck of developer resources at your fingertips!",
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "tabs", "management"],
     "browser_action": {
         "default_popup": "popup.html",
         "default_title": "DevDeck"
     },
     "background": {
-        "scripts": ["build/background.ts"],
+        "scripts": ["build/background.js"],
         "persistent": false
     },
     "manifest_version": 2,
@@ -20,7 +20,7 @@
     "content_scripts": [
         {
             "matches": ["https://*/*"],
-            "js": ["build/injection.ts"]
+            "js": ["build/injection.js"]
         }
     ]
 }

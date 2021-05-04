@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { newCategory } from "../stores";
+    import { newCategory } from "../stores/stores";
 
     let selectedIcon = "";
 

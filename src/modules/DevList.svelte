@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { selectedResource, resources } from "../stores";
+    import { selectedResource, resources } from "../stores/stores";
     import DevItem from "./DevItem.svelte";
     let selectedResources;
     $: $selectedResource, setResources();

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { categories } from "../stores";
+    import { categories } from "../stores/stores";
     import CategoryItem from "./CategoryItem.svelte";
 </script>
 
