@@ -82,11 +82,11 @@ export default [
         }
     },
     {
-        input: "src/background.ts",
+        input: "src/background.js",
         output: {
             sourcemap: true,
             format: "iife",
-            file: "public/build/background.ts"
+            file: "public/build/background.js"
         },
         plugins: [resolve(), commonjs()],
         watch: {
@@ -94,11 +94,11 @@ export default [
         }
     },
     {
-        input: "src/injection.ts",
+        input: "src/injection.js",
         output: {
             sourcemap: true,
             format: "iife",
-            file: "public/build/injection.ts"
+            file: "public/build/injection.js"
         },
         plugins: [resolve(), commonjs()],
         watch: {

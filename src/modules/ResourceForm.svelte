@@ -1,5 +1,5 @@
 <script>
-    import { page, resources } from "../stores";
+    import { page, resources } from "../stores/stores";
     let title;
     let category;
     let link;

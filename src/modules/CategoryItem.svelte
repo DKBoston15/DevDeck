@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { selectedResource, page } from "../stores";
+    import { selectedResource, page } from "../stores/stores";
     export let icon: string;
     export let title: string;
 

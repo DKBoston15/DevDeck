@@ -1,7 +1,7 @@
 <script>
     import Input from "../components/Input.svelte";
     import IconSelect from "../components/IconSelect.svelte";
-    import { page, categories, newCategory } from "../stores";
+    import { page, categories, newCategory } from "../stores/stores";
 
     const addCategory = () => {
         $categories.push({ ...$newCategory });
